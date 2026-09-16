@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Nadadora bajo el agua vista desde atras con los auriculares de conduccion osea AQUALISE sobre la nuca">
+  <defs>
+    <linearGradient id="h-agua" x1="0.1" y1="0" x2="0.25" y2="1">
+      <stop offset="0%" stop-color="#F5FCFE"/><stop offset="13%" stop-color="#D5F0F7"/>
+      <stop offset="36%" stop-color="#93D5E7"/><stop offset="62%" stop-color="#43A8C3"/>
+      <stop offset="85%" stop-color="#166A82"/><stop offset="100%" stop-color="#0A4053"/>
+    </linearGradient>
+    <linearGradient id="h-rayo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".46"/>
+      <stop offset="52%" stop-color="#EAF9FD" stop-opacity=".11"/>
+      <stop offset="100%" stop-color="#EAF9FD" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="h-piel" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#14647B"/><stop offset="42%" stop-color="#0C4459"/><stop offset="100%" stop-color="#062B3A"/>
+    </linearGradient>
+    <linearGradient id="h-gorro" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#1B7A93"/><stop offset="55%" stop-color="#0F5169"/><stop offset="100%" stop-color="#07303F"/>
+    </linearGradient>
+    <linearGradient id="h-cromo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="32%" stop-color="#E0EDF2"/>
+      <stop offset="60%" stop-color="#A2BAC3"/><stop offset="82%" stop-color="#F6FBFC"/><stop offset="100%" stop-color="#90A9B3"/>
+    </linearGradient>
+    <radialGradient id="h-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".3"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="h-vin" cx="0.55" cy="0.45" r="0.75">
+      <stop offset="50%" stop-color="#000000" stop-opacity="0"/><stop offset="100%" stop-color="#03212C" stop-opacity=".5"/>
+    </radialGradient>
+    <filter id="h-caust" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.028 0.052" numOctaves="2" seed="19" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  8 0 0 0 -3.55"/>
+      <feGaussianBlur stdDeviation=".9"/>
+    </filter>
+    <filter id="h-caust-l" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.024" numOctaves="2" seed="5" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  7 0 0 0 -3.2"/>
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="h-sujeto" x="-15%" y="-15%" width="130%" height="130%"><feGaussianBlur stdDeviation="1.1"/></filter>
+    <filter id="h-glow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="10"/></filter>
+    <linearGradient id="h-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="55%" stop-color="#FFFFFF" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="h-mask-fade"><rect width="1400" height="1000" fill="url(#h-fade)"/></mask>
+    <clipPath id="h-cuerpo-clip">
+      <path d="M660 1000c5-122 60-204 152-240 52-20 88-52 106-88h124c18 36 54 68 106 88 92 36 147 118 152 240Z"/>
+      <ellipse cx="980" cy="500" rx="128" ry="142"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#h-agua)"/>
+
+  <!-- superficie -->
+  <g opacity=".8">
+    <path d="M0 0h1400v70c-70 16-140-12-210-2s-140 29-210 22-140-27-210-20-140 25-210 20S140 70 70 77 0 88 0 88Z" fill="#FFFFFF" opacity=".45"/>
+    <path d="M0 82c80 14 150-10 230-3s150 25 230 18 150-23 230-16 150 21 230 16 170-20 250-11V82Z" fill="#FFFFFF" opacity=".2"/>
+  </g>
+
+  <!-- rayos -->
+  <g opacity=".75">
+    <polygon points="230,0 340,0 170,1000 10,1000" fill="url(#h-rayo)" filter="url(#h-glow)"/>
+    <polygon points="580,0 640,0 500,1000 390,1000" fill="url(#h-rayo)" filter="url(#h-glow)" opacity=".7"/>
+    <polygon points="1010,0 1120,0 1170,1000 980,1000" fill="url(#h-rayo)" filter="url(#h-glow)" opacity=".45"/>
+  </g>
+
+  <g mask="url(#h-mask-fade)">
+    <rect width="1400" height="1000" filter="url(#h-caust-l)" opacity=".13"/>
+    <rect width="1400" height="1000" filter="url(#h-caust)" opacity=".1"/>
+  </g>
+  <ellipse cx="980" cy="520" rx="420" ry="330" fill="url(#h-halo)"/>
+
+  <!-- ===== nadadora de espaldas ===== -->
+  <g transform="rotate(-4 980 640)">
+    <!-- espalda y hombros -->
+    <g filter="url(#h-sujeto)">
+      <path d="M980 660c118 0 198 38 244 100 44 60 62 138 66 240H670c4-102 22-180 66-240 46-62 126-100 244-100Z" fill="url(#h-piel)"/>
+      <path d="M852 706c-56 24-96 62-122 112 36-32 80-56 130-72Z" fill="#0A3B4D" opacity=".3"/>
+      <path d="M1108 706c56 24 96 62 122 112-36-32-80-56-130-72Z" fill="#0A3B4D" opacity=".3"/>
+      <path d="M980 672c0 120-4 220-10 328" stroke="#062B3A" stroke-width="14" opacity=".2" fill="none" stroke-linecap="round"/>
+      <!-- cuello -->
+      <path d="M910 556h140v104c0 24-31 40-70 40s-70-16-70-40Z" fill="url(#h-piel)"/>
+      <path d="M910 620c26 20 104 24 140 2v38c0 24-31 40-70 40s-70-16-70-40Z" fill="#083647" opacity=".38"/>
+      <!-- cabeza con gorro -->
+      <ellipse cx="980" cy="486" rx="118" ry="148" fill="url(#h-gorro)"/>
+      <path d="M900 372c40-28 120-28 160 0-26-18-62-26-80-26s-54 8-80 26Z" fill="#54BDD4" opacity=".4"/>
+      <ellipse cx="934" cy="418" rx="34" ry="58" fill="#5EC4DA" opacity=".16" transform="rotate(-16 934 418)"/>
+      <path d="M876 566c26 42 66 64 104 64s78-22 104-64c-14 58-58 92-104 92s-90-34-104-92Z" fill="#062B3A" opacity=".45"/>
+    </g>
+
+    <!-- ===== auriculares AQUALISE sobre la nuca ===== -->
+    <g>
+      <path d="M884 606c28 50 184 50 212 0" fill="none" stroke="url(#h-cromo)" stroke-width="22" stroke-linecap="round"/>
+      <path d="M894 600c26 42 170 42 194 0" fill="none" stroke="#FFFFFF" stroke-width="5.5" stroke-linecap="round" opacity=".55"/>
+      <g transform="rotate(-30 866 592)">
+        <rect x="824" y="568" width="86" height="50" rx="25" fill="url(#h-cromo)"/>
+        <rect x="824" y="568" width="86" height="50" rx="25" fill="none" stroke="#7FA4B0" stroke-width="1.6" opacity=".5"/>
+        <path d="M836 580c16-7 42-8 62-4" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" opacity=".9"/>
+        <circle cx="894" cy="600" r="4.4" fill="#46B6CE"/>
+      </g>
+      <g transform="rotate(30 1094 592)">
+        <rect x="1050" y="568" width="86" height="50" rx="25" fill="url(#h-cromo)"/>
+        <rect x="1050" y="568" width="86" height="50" rx="25" fill="none" stroke="#7FA4B0" stroke-width="1.6" opacity=".5"/>
+        <path d="M1062 580c16-7 42-8 62-4" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" fill="none" opacity=".9"/>
+        <circle cx="1066" cy="600" r="4.4" fill="#46B6CE"/>
+      </g>
+      <ellipse cx="980" cy="600" rx="170" ry="50" fill="#FFFFFF" opacity=".1" filter="url(#h-glow)"/>
+    </g>
+  </g>
+
+  <!-- burbujas -->
+  <g fill="#FFFFFF">
+    <circle cx="1206" cy="430" r="10" opacity=".5"/><circle cx="1252" cy="368" r="6" opacity=".42"/>
+    <circle cx="1284" cy="296" r="13" opacity=".34"/><circle cx="1216" cy="286" r="6.5" opacity=".3"/>
+    <circle cx="1328" cy="222" r="8" opacity=".26"/><circle cx="1174" cy="356" r="4.5" opacity=".46"/>
+    <circle cx="742" cy="400" r="7" opacity=".34"/><circle cx="700" cy="330" r="4.5" opacity=".28"/>
+    <circle cx="660" cy="262" r="9" opacity=".22"/>
+  </g>
+
+  <rect width="1400" height="1000" fill="url(#h-vin)"/>
+</svg>

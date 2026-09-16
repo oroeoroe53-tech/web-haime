@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Base de carga magnetica AQUALISE">
+  <defs>
+    <radialGradient id="g-bg" cx="0.5" cy="0.35" r="0.75"><stop offset="0%" stop-color="#FBFEFF"/><stop offset="100%" stop-color="#D8EFF6"/></radialGradient>
+    <linearGradient id="g-disc" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#DCECF2"/><stop offset="100%" stop-color="#A6C2CD"/></linearGradient>
+    <linearGradient id="g-cromo" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#93ACB6"/><stop offset="30%" stop-color="#FFFFFF"/><stop offset="70%" stop-color="#C6D9E0"/><stop offset="100%" stop-color="#93ACB6"/></linearGradient>
+    <filter id="g-s" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0B4354" flood-opacity=".22"/></filter>
+    <filter id="g-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="600" height="600" fill="url(#g-bg)"/>
+  <ellipse cx="300" cy="420" rx="170" ry="30" fill="#8FC2D2" opacity=".26"/>
+  <g filter="url(#g-s)">
+    <ellipse cx="300" cy="376" rx="152" ry="52" fill="url(#g-disc)"/>
+    <rect x="148" y="332" width="304" height="46" fill="url(#g-disc)"/>
+    <ellipse cx="300" cy="332" rx="152" ry="52" fill="url(#g-cromo)" opacity=".95"/>
+    <ellipse cx="300" cy="328" rx="118" ry="40" fill="#EDF7FA"/>
+    <ellipse cx="300" cy="326" rx="52" ry="18" fill="#CFE6EE"/>
+    <circle cx="300" cy="326" r="7" fill="#46B6CE"/>
+  </g>
+  <ellipse cx="300" cy="300" rx="90" ry="26" fill="#7FD6EC" opacity=".4" filter="url(#g-glow)"/>
+  <text x="300" y="500" text-anchor="middle" font-family="Jost, Futura, Helvetica Neue, sans-serif" font-size="16" letter-spacing="6" fill="#7A9BA7">CARGA INAL&#193;MBRICA</text>
+</svg>

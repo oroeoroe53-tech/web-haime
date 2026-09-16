@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Piscina de lujo vista desde arriba con una nadadora que lleva auriculares AQUALISE">
+  <defs>
+    <linearGradient id="p-agua" x1="0.1" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#C7ECF6"/><stop offset="28%" stop-color="#8ED2E5"/>
+      <stop offset="62%" stop-color="#48AAC4"/><stop offset="100%" stop-color="#1B7791"/>
+    </linearGradient>
+    <linearGradient id="p-piedra" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8F4EC"/><stop offset="45%" stop-color="#EDE5D8"/><stop offset="100%" stop-color="#DCD1BF"/>
+    </linearGradient>
+    <linearGradient id="p-borde" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDFBF6"/><stop offset="100%" stop-color="#E4DACA"/>
+    </linearGradient>
+    <linearGradient id="p-cuerpo" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#12657C"/><stop offset="50%" stop-color="#0C4659"/><stop offset="100%" stop-color="#062F3E"/>
+    </linearGradient>
+    <linearGradient id="p-cromo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#D9E9EE"/><stop offset="100%" stop-color="#9AB3BC"/>
+    </linearGradient>
+    <linearGradient id="p-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".9"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity=".25"/>
+    </linearGradient>
+    <mask id="p-mask"><rect y="120" width="1200" height="520" fill="url(#p-fade)"/></mask>
+    <filter id="p-caust" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024 0.045" numOctaves="2" seed="21" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  8 0 0 0 -3.5"/>
+      <feGaussianBlur stdDeviation="1"/>
+    </filter>
+    <filter id="p-sujeto" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.6"/></filter>
+    <filter id="p-espuma" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="p-sombra" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#8A7B62" flood-opacity=".35"/>
+    </filter>
+  </defs>
+
+  <!-- terraza -->
+  <rect width="1200" height="800" fill="url(#p-piedra)"/>
+  <g opacity=".45" stroke="#D2C6B1" stroke-width="1.3" fill="none">
+    <path d="M0 42h1200M0 86h1200M0 700h1200M0 754h1200"/>
+    <path d="M150 0v120M400 0v120M650 0v120M900 0v120M1150 0v120M150 640v160M400 640v160M650 640v160M900 640v160M1150 640v160"/>
+  </g>
+
+  <!-- tumbonas -->
+  <g fill="#0B2B36" opacity=".16" filter="url(#p-sombra)">
+    <rect x="120" y="14" width="66" height="94" rx="20"/><rect x="128" y="0" width="50" height="22" rx="10"/>
+    <rect x="220" y="14" width="66" height="94" rx="20"/><rect x="228" y="0" width="50" height="22" rx="10"/>
+    <circle cx="200" cy="96" r="14"/>
+    <rect x="940" y="700" width="66" height="94" rx="20"/><rect x="1040" y="700" width="66" height="94" rx="20"/>
+    <circle cx="1022" cy="748" r="14"/>
+  </g>
+
+  <!-- borde y agua -->
+  <rect y="112" width="1200" height="16" fill="url(#p-borde)"/>
+  <rect y="632" width="1200" height="16" fill="url(#p-borde)"/>
+  <rect y="126" width="1200" height="508" fill="#7FBBCB"/>
+  <rect y="128" width="1200" height="504" fill="url(#p-agua)"/>
+  <g mask="url(#p-mask)"><rect y="120" width="1200" height="520" filter="url(#p-caust)" opacity=".26"/></g>
+
+  <!-- corcheras -->
+  <g>
+    <g fill="#F4FBFD" opacity=".85">
+      <circle cx="30" cy="212" r="9"/><circle cx="70" cy="212" r="9"/><circle cx="110" cy="212" r="9"/>
+      <circle cx="230" cy="212" r="9"/><circle cx="270" cy="212" r="9"/><circle cx="310" cy="212" r="9"/>
+      <circle cx="430" cy="212" r="9"/><circle cx="470" cy="212" r="9"/><circle cx="510" cy="212" r="9"/>
+      <circle cx="630" cy="212" r="9"/><circle cx="670" cy="212" r="9"/><circle cx="710" cy="212" r="9"/>
+      <circle cx="830" cy="212" r="9"/><circle cx="870" cy="212" r="9"/><circle cx="910" cy="212" r="9"/>
+      <circle cx="1030" cy="212" r="9"/><circle cx="1070" cy="212" r="9"/><circle cx="1110" cy="212" r="9"/>
+    </g>
+    <g fill="#6FC1D8" opacity=".9">
+      <circle cx="150" cy="212" r="9"/><circle cx="190" cy="212" r="9"/>
+      <circle cx="350" cy="212" r="9"/><circle cx="390" cy="212" r="9"/>
+      <circle cx="550" cy="212" r="9"/><circle cx="590" cy="212" r="9"/>
+      <circle cx="750" cy="212" r="9"/><circle cx="790" cy="212" r="9"/>
+      <circle cx="950" cy="212" r="9"/><circle cx="990" cy="212" r="9"/>
+      <circle cx="1150" cy="212" r="9"/><circle cx="1190" cy="212" r="9"/>
+    </g>
+    <g fill="#F4FBFD" opacity=".7">
+      <circle cx="30" cy="572" r="9"/><circle cx="70" cy="572" r="9"/><circle cx="110" cy="572" r="9"/>
+      <circle cx="230" cy="572" r="9"/><circle cx="270" cy="572" r="9"/><circle cx="310" cy="572" r="9"/>
+      <circle cx="430" cy="572" r="9"/><circle cx="470" cy="572" r="9"/><circle cx="510" cy="572" r="9"/>
+      <circle cx="630" cy="572" r="9"/><circle cx="670" cy="572" r="9"/><circle cx="710" cy="572" r="9"/>
+      <circle cx="830" cy="572" r="9"/><circle cx="870" cy="572" r="9"/><circle cx="910" cy="572" r="9"/>
+      <circle cx="1030" cy="572" r="9"/><circle cx="1070" cy="572" r="9"/><circle cx="1110" cy="572" r="9"/>
+    </g>
+    <g fill="#6FC1D8" opacity=".75">
+      <circle cx="150" cy="572" r="9"/><circle cx="190" cy="572" r="9"/>
+      <circle cx="350" cy="572" r="9"/><circle cx="390" cy="572" r="9"/>
+      <circle cx="550" cy="572" r="9"/><circle cx="590" cy="572" r="9"/>
+      <circle cx="750" cy="572" r="9"/><circle cx="790" cy="572" r="9"/>
+      <circle cx="950" cy="572" r="9"/><circle cx="990" cy="572" r="9"/>
+      <circle cx="1150" cy="572" r="9"/><circle cx="1190" cy="572" r="9"/>
+    </g>
+  </g>
+
+  <!-- escalerilla de cromo -->
+  <g stroke="url(#p-cromo)" stroke-width="10" fill="none" stroke-linecap="round" opacity=".95">
+    <path d="M1096 104v34c0 26-14 40-14 62"/><path d="M1146 104v34c0 26-14 40-14 62"/>
+  </g>
+
+  <!-- reflejo del sol -->
+  <g fill="#FFFFFF" opacity=".42">
+    <ellipse cx="250" cy="300" rx="190" ry="34" filter="url(#p-espuma)"/>
+    <ellipse cx="1000" cy="470" rx="170" ry="28" filter="url(#p-espuma)" opacity=".7"/>
+  </g>
+
+  <!-- estela -->
+  <g fill="#FFFFFF" opacity=".4" filter="url(#p-espuma)">
+    <ellipse cx="380" cy="392" rx="210" ry="44"/>
+    <ellipse cx="250" cy="386" rx="120" ry="28" opacity=".7"/>
+  </g>
+
+  <!-- ===== nadadora vista desde arriba ===== -->
+  <g transform="translate(620,390) rotate(-6)">
+    <g fill="url(#p-cuerpo)" filter="url(#p-sujeto)" opacity=".92">
+      <path d="M-100-40c-70-6-150 0-220 16-24 6-42 12-54 16l8 30c14-4 32-10 54-15 68-16 146-22 212-19Z"/>
+      <path d="M-100 14c-70 6-146 20-212 40-24 7-42 14-54 19l14 28c14-6 32-13 54-20 66-22 140-36 198-40Z"/>
+      <path d="M-330-34c-30-2-54 4-70 14 18 12 44 18 72 18Z"/><ellipse cx="-398" cy="-16" rx="22" ry="12" transform="rotate(14 -398 -16)"/>
+      <path d="M-352 80c-30 6-52 18-68 32 22 6 50 0 78-10Z"/><ellipse cx="-390" cy="112" rx="22" ry="12" transform="rotate(-16 -390 112)"/>
+      <path d="M96-62C40-70-40-62-112-42v84c72 20 152 28 208 20 24-8 30-42 30-62s-6-54-30-62Z"/>
+      <ellipse cx="150" cy="0" rx="48" ry="43"/>
+      <path d="M60-56c60-28 130-56 190-72 24-6 42-10 56-12l6 32c-14 2-30 6-52 12-58 16-124 46-168 68Z"/>
+      <ellipse cx="338" cy="-128" rx="34" ry="17" transform="rotate(-14 338 -128)"/>
+      <path d="M70 54C20 78-50 96-108 106l-8-32C-62 64 4 46 56 24Z"/>
+    </g>
+
+    <!-- auriculares vistos desde arriba -->
+    <g>
+      <path d="M126-44c-18 24-18 64 0 88" fill="none" stroke="url(#p-cromo)" stroke-width="11" stroke-linecap="round"/>
+      <rect x="116" y="-62" width="42" height="26" rx="13" fill="url(#p-cromo)" transform="rotate(-14 137 -49)"/>
+      <rect x="116" y="36" width="42" height="26" rx="13" fill="url(#p-cromo)" transform="rotate(14 137 49)"/>
+      <circle cx="137" cy="-49" r="3.6" fill="#46B6CE"/><circle cx="137" cy="49" r="3.6" fill="#46B6CE"/>
+    </g>
+
+    <!-- espuma en la cabeza y la mano -->
+    <g fill="#FFFFFF">
+      <ellipse cx="170" cy="-20" rx="70" ry="36" opacity=".45" filter="url(#p-espuma)"/>
+      <ellipse cx="352" cy="-124" rx="46" ry="26" opacity=".5" filter="url(#p-espuma)"/>
+      <circle cx="252" cy="-96" r="6" opacity=".6"/><circle cx="288" cy="-118" r="4" opacity=".5"/>
+      <circle cx="206" cy="-56" r="5" opacity=".55"/>
+    </g>
+  </g>
+
+  <g mask="url(#p-mask)"><rect y="120" width="1200" height="520" filter="url(#p-caust)" opacity=".12"/></g>
+</svg>

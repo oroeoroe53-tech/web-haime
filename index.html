@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AQUALISÉ — Auriculares de conducción ósea para nadar | Audio subacuático de lujo</title>
+<meta name="description" content="AQUALISÉ crea auriculares de conducción ósea sumergibles: dos unidades junto a los oídos y una banda flexible de titanio tras la nuca. Sonido excepcional bajo el agua. Descubre tu ritmo bajo el agua.">
+<meta name="theme-color" content="#0B4354">
+<meta property="og:title" content="AQUALISÉ — Descubre tu ritmo bajo el agua">
+<meta property="og:description" content="Audio de conducción ósea, sumergible 10 ATM, 32 g. Una experiencia sensorial exclusiva para nadadores.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/aqualise.css">
+</head>
+<body>
+
+<!-- ========== Definiciones SVG reutilizables ========== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="car-nacar" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="45%" stop-color="#F0F6F8"/><stop offset="100%" stop-color="#C3D3DA"/>
+    </linearGradient>
+    <linearGradient id="car-laguna" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BDE6F2"/><stop offset="45%" stop-color="#6FC1D8"/><stop offset="100%" stop-color="#1B7E99"/>
+    </linearGradient>
+    <linearGradient id="car-titanio" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6E8592"/><stop offset="45%" stop-color="#3E525F"/><stop offset="100%" stop-color="#1C2B35"/>
+    </linearGradient>
+    <linearGradient id="car-champan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6EAD4"/><stop offset="45%" stop-color="#E2CDA4"/><stop offset="100%" stop-color="#B99C67"/>
+    </linearGradient>
+    <linearGradient id="car-cromo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="30%" stop-color="#E2EFF3"/>
+      <stop offset="60%" stop-color="#A8BFC8"/><stop offset="82%" stop-color="#F4FAFC"/><stop offset="100%" stop-color="#8FA9B3"/>
+    </linearGradient>
+
+    <symbol id="pieza-aqualise" viewBox="0 0 620 400">
+      <ellipse cx="310" cy="356" rx="196" ry="18" fill="#0B4354" opacity=".12"/>
+      <path d="M118 296C118 120 206 60 310 60s192 60 192 236" fill="none" stroke="var(--carcasa,url(#car-nacar))" stroke-width="30" stroke-linecap="round"/>
+      <path d="M160 212c18-72 76-114 150-114s132 42 150 114" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity=".45"/>
+      <path d="M136 288c-4-62 10-122 40-158" fill="none" stroke="url(#car-cromo)" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+      <path d="M504 288c4-62-10-122-40-158" fill="none" stroke="url(#car-cromo)" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+      <g transform="rotate(14 132 302)">
+        <rect x="62" y="260" width="140" height="86" rx="43" fill="var(--carcasa,url(#car-nacar))"/>
+        <rect x="62" y="260" width="140" height="86" rx="43" fill="none" stroke="url(#car-cromo)" stroke-width="5"/>
+        <ellipse cx="132" cy="303" rx="34" ry="28" fill="none" stroke="url(#car-cromo)" stroke-width="4" opacity=".85"/>
+        <ellipse cx="132" cy="303" rx="20" ry="16" fill="#EAF4F8" opacity=".72"/>
+        <circle cx="132" cy="303" r="8" fill="#2E9BB8"/>
+        <circle cx="132" cy="303" r="3" fill="#F2FBFD"/>
+        <path d="M84 276c24-10 64-12 94-6" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity=".75"/>
+      </g>
+      <g transform="rotate(-14 488 302)">
+        <rect x="418" y="260" width="140" height="86" rx="43" fill="var(--carcasa,url(#car-nacar))"/>
+        <rect x="418" y="260" width="140" height="86" rx="43" fill="none" stroke="url(#car-cromo)" stroke-width="5"/>
+        <ellipse cx="488" cy="303" rx="34" ry="28" fill="none" stroke="url(#car-cromo)" stroke-width="4" opacity=".85"/>
+        <ellipse cx="488" cy="303" rx="20" ry="16" fill="#EAF4F8" opacity=".72"/>
+        <circle cx="488" cy="303" r="8" fill="#2E9BB8"/>
+        <circle cx="488" cy="303" r="3" fill="#F2FBFD"/>
+        <path d="M442 276c24-10 64-12 94-6" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity=".75"/>
+        <g opacity=".5" fill="#8FA9B3"><circle cx="506" cy="338" r="3.4"/><circle cx="522" cy="330" r="3.4"/></g>
+      </g>
+    </symbol>
+
+    <symbol id="i-flecha" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="m4 12.5 5 5L20 6"/></symbol>
+    <symbol id="i-carrito" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" d="M4 6h2l2 11h10l2-8H7m2 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></symbol>
+    <symbol id="i-buscar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5.5-1.5L21 21"/></symbol>
+    <symbol id="i-cuenta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 8c0-3.3 3.6-6 8-6s8 2.7 8 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-cerrar" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 2.6 5.6 6.1.8-4.5 4.2 1.2 6L12 16.8 6.6 19.6l1.2-6L3.3 9.4l6.1-.8Z"/></symbol>
+    <symbol id="i-gota" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" d="M12 3.5c3.4 4 6 7.1 6 10a6 6 0 0 1-12 0c0-2.9 2.6-6 6-10Z"/></symbol>
+    <symbol id="i-onda" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M2 9c2.5-2.4 4.5 2.4 7 0s4.5 2.4 7 0 4.5 2.4 6 .4M2 16c2.5-2.4 4.5 2.4 7 0s4.5 2.4 7 0 4.5 2.4 6 .4"/></symbol>
+    <symbol id="i-hueso" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M12 4v16M8 7.5C6 8.5 5 10.1 5 12s1 3.5 3 4.5M16 7.5c2 1 3 2.6 3 4.5s-1 3.5-3 4.5"/></symbol>
+    <symbol id="i-rayo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" d="M13 3 5.5 13.5H12L10.5 21 18 10.5h-6.4Z"/></symbol>
+    <symbol id="i-memoria" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" d="M6 5h9l3 3v11H6Zm3 0v5h6M9 19v-5h6v5"/></symbol>
+    <symbol id="i-pluma" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M4 20c6-1 10-4 12-8s3-6 3-8c-3 0-6 1-9 3S5 12 4 20Zm4-4 8-8"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" d="M12 3.5 5 6v6c0 4.2 3 7.4 7 8.5 4-1.1 7-4.3 7-8.5V6Z"/></symbol>
+    <symbol id="i-llave" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M12 3 4 10.5V20h16v-9.5Zm-2 17v-6h4v6"/></symbol>
+  </defs>
+</svg>
+
+<!-- ========== Aviso superior ========== -->
+<div class="aviso" role="complementary" aria-label="Ventajas AQUALISÉ">
+  <div class="aviso-pista" id="avisoPista">
+    <span>Envío asegurado en 24 h en toda la península</span>
+    <span>Grabado personalizado sin coste</span>
+    <span>Tres años de garantía Aqualisé</span>
+    <span>60 días para devolverlo, incluso mojado</span>
+    <span>Asesoramiento privado: +34 910 24 18 00</span>
+  </div>
+</div>
+
+<!-- ========== Cabecera ========== -->
+<header class="cabecera" id="cabecera">
+  <div class="contenedor cabecera-fila">
+    <a href="#inicio" class="marca" aria-label="AQUALISÉ, inicio">
+      <svg class="marca-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="mk" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#8FCFE0"/><stop offset="38%" stop-color="#1C8CA8"/>
+            <stop offset="72%" stop-color="#0E5C6E"/><stop offset="100%" stop-color="#46B6CE"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="46.5" fill="none" stroke="url(#mk)" stroke-width="1.6" opacity=".45"/>
+        <path d="M25 67C25 37 35.5 22 50 22s25 15 25 45" fill="none" stroke="url(#mk)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="25" cy="68.5" r="6.4" fill="url(#mk)"/><circle cx="75" cy="68.5" r="6.4" fill="url(#mk)"/>
+        <circle cx="25" cy="68.5" r="2.6" fill="#F7FCFD" opacity=".9"/><circle cx="75" cy="68.5" r="2.6" fill="#F7FCFD" opacity=".9"/>
+        <path d="M12 82c7.5-6 12.5 6 20 0s12.5 6 20 0 12.5 6 20 0 12.5 6 16 2" fill="none" stroke="#1C8CA8" stroke-width="2.8" stroke-linecap="round" opacity=".8"/>
+      </svg>
+      <span class="marca-texto">
+        <span class="marca-nombre">AQUALISÉ</span>
+        <span class="marca-sub">Audio subacuático</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#coleccion">Colección</a>
+      <a href="#acabados">Acabados</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#club">Club Aqualisé</a>
+    </nav>
+
+    <div class="acciones">
+      <button class="icono-btn" type="button" aria-label="Buscar"><svg aria-hidden="true"><use href="#i-buscar"/></svg></button>
+      <button class="icono-btn" type="button" aria-label="Mi cuenta"><svg aria-hidden="true"><use href="#i-cuenta"/></svg></button>
+      <button class="icono-btn" type="button" id="abrirCarrito" aria-label="Abrir la bolsa de la compra">
+        <svg aria-hidden="true"><use href="#i-carrito"/></svg>
+        <span class="contador" id="contadorCarrito">0</span>
+      </button>
+      <button class="icono-btn menu-btn" type="button" id="abrirMenu" aria-label="Abrir el menú"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== Menú móvil ========== -->
+<div class="menu-movil" id="menuMovil">
+  <button class="icono-btn cerrar" type="button" id="cerrarMenu" aria-label="Cerrar el menú"><svg aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+  <nav aria-label="Menú móvil">
+    <a href="#coleccion">Colección</a>
+    <a href="#acabados">Acabados</a>
+    <a href="#tecnologia">Tecnología</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#club">Club Aqualisé</a>
+    <a href="#boletin">Boletín</a>
+  </nav>
+</div>
+
+<main id="inicio">
+
+<!-- ========== Hero ========== -->
+<section class="hero">
+  <div class="hero-fondo">
+    <img src="assets/img/hero-inmersion.svg" alt="Nadadora deslizándose bajo el agua con los auriculares de conducción ósea AQUALISÉ junto a los oídos" width="1400" height="1000">
+  </div>
+  <div class="hero-velo"></div>
+
+  <div class="contenedor hero-contenido">
+    <div class="hero-caja">
+      <span class="antetitulo">Conducción ósea · Sumergible 10 ATM</span>
+      <h1 class="display">Descubre tu ritmo<br><span class="cursiva">bajo el agua</span></h1>
+      <p class="hero-texto">Dos unidades minúsculas descansan junto a tus oídos. Una banda flexible de titanio abraza la nuca. No hay cables, no hay tapones, no hay ruido: solo el azul, tu respiración y la música que viaja por el hueso.</p>
+      <div class="hero-botones">
+        <a href="#coleccion" class="btn btn-primario"><span>Descubre tu ritmo bajo el agua</span><svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+        <a href="#tecnologia" class="btn btn-claro"><span>La tecnología</span></a>
+      </div>
+      <div class="hero-datos">
+        <div class="dato"><strong data-cifra="10">0</strong><span>ATM de presión</span></div>
+        <div class="dato"><strong data-cifra="32" data-sufijo=" g">0</strong><span>En la nuca</span></div>
+        <div class="dato"><strong data-cifra="14" data-sufijo=" h">0</strong><span>De sesión</span></div>
+        <div class="dato"><strong data-cifra="8" data-sufijo=" GB">0</strong><span>Sin teléfono</span></div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="hero-ficha">
+    <b>Silencio azul</b>
+    <p>Los oídos quedan libres. Oyes al entrenador, la campana del viraje y tu propio pulso mientras la música te acompaña desde dentro.</p>
+  </aside>
+
+  <div class="hero-scroll" aria-hidden="true"><span>Sumérgete</span><i></i></div>
+</section>
+
+<!-- ========== Prensa ========== -->
+<section class="prensa">
+  <div class="contenedor prensa-fila revelar">
+    <span>Áurea</span><span>Nautis Review</span><span>Piscina &amp; Diseño</span><span>Luxe Ibérica</span><span>Mar Interior</span>
+  </div>
+</section>
+
+<!-- ========== Manifiesto ========== -->
+<section class="manifiesto">
+  <div class="contenedor manifiesto-red">
+    <div class="manifiesto-texto revelar">
+      <span class="antetitulo">El manifiesto</span>
+      <h2 class="titulo-1">Un mundo privado a<br><span class="cursiva brillo">cuatro metros</span> de la superficie</h2>
+      <p class="entradilla">Bajo el agua el mundo se apaga. Desaparecen las pantallas, las voces, las prisas. Queda un cuerpo que avanza y una cadencia que se repite. AQUALISÉ nació para habitar ese espacio: no para llenarlo de ruido, sino para darle una banda sonora.</p>
+      <p class="entradilla">Nuestros ingenieros pasaron cuatro años perfeccionando un transductor capaz de transmitir música a través del pómulo con una fidelidad que nadie creía posible en inmersión. El resultado no se lleva en los oídos. Se siente.</p>
+      <div class="manifiesto-firma">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#i-pluma" x="26" y="26" width="48" height="48" color="#1C8CA8"/><circle cx="50" cy="50" r="46" fill="none" stroke="#A8DCE8" stroke-width="1.5"/></svg>
+        <p>Diseñado y ensamblado a mano<br>en San Sebastián, España</p>
+      </div>
+    </div>
+    <div class="manifiesto-media revelar-escala">
+      <div class="marco marco-alto">
+        <img src="assets/img/lifestyle-detalle.svg" alt="Detalle del transductor de conducción ósea AQUALISÉ apoyado junto al oído de una nadadora" width="1000" height="1000" loading="lazy">
+      </div>
+      <figure class="cita-flotante">
+        <p>«El primer largo con AQUALISÉ no se olvida.»</p>
+        <cite>Revista Áurea · Objeto del año</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Colección ========== -->
+<section class="seccion seccion-clara" id="coleccion">
+  <div class="contenedor">
+    <div class="cabeza-seccion revelar">
+      <div>
+        <span class="antetitulo">La colección</span>
+        <h2 class="titulo-1">Tres formas de entrar<br>en el agua</h2>
+      </div>
+      <p class="entradilla">Un mismo corazón acústico, tres temperamentos. Todos sellados a 10 ATM, todos con la banda flexible de titanio que se olvida en cuanto empiezas a nadar.</p>
+    </div>
+
+    <div class="rejilla-productos escalonado">
+
+      <article class="producto">
+        <div class="producto-visual">
+          <span class="etiqueta">Esencial</span>
+          <svg class="pieza" viewBox="0 0 620 400" role="img" aria-label="AQUALISÉ Onda en acabado nácar" style="--carcasa:url(#car-nacar)"><use href="#pieza-aqualise"/></svg>
+        </div>
+        <div class="producto-cuerpo">
+          <div class="estrellas" aria-label="Valoración: 4,8 sobre 5">
+            <svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg>
+          </div>
+          <h3>AQUALISÉ Onda</h3>
+          <p class="desc">La puerta de entrada al silencio azul. Ligereza extrema y un sonido cálido, pensado para nadar largo y despacio.</p>
+          <div class="producto-specs">
+            <span class="chip">10 ATM</span><span class="chip">32 g</span><span class="chip">12 h</span><span class="chip">Bluetooth 5.4</span>
+          </div>
+          <div class="producto-pie">
+            <div class="precio">349 €<small>IVA incluido</small></div>
+          </div>
+          <button class="btn btn-primario btn-bloque btn-pequeno anadir" type="button" data-nombre="AQUALISÉ Onda" data-variante="Nácar" data-precio="349" data-color="car-nacar">
+            <span>Añadir al carrito</span><svg aria-hidden="true"><use href="#i-flecha"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="producto">
+        <div class="producto-visual">
+          <span class="etiqueta">Más vendido</span>
+          <svg class="pieza" viewBox="0 0 620 400" role="img" aria-label="AQUALISÉ Marea Pro en acabado laguna" style="--carcasa:url(#car-laguna)"><use href="#pieza-aqualise"/></svg>
+        </div>
+        <div class="producto-cuerpo">
+          <div class="estrellas" aria-label="Valoración: 5 sobre 5">
+            <svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg>
+          </div>
+          <h3>AQUALISÉ Marea Pro</h3>
+          <p class="desc">Para quien cuenta cada largo. Memoria interna de 8 GB, sensor de viraje y graves reforzados que sostienen el ritmo de la serie.</p>
+          <div class="producto-specs">
+            <span class="chip">10 ATM</span><span class="chip">30 g</span><span class="chip">14 h</span><span class="chip">8 GB · sin móvil</span>
+          </div>
+          <div class="producto-pie">
+            <div class="precio">489 €<small>IVA incluido</small></div>
+          </div>
+          <button class="btn btn-primario btn-bloque btn-pequeno anadir" type="button" data-nombre="AQUALISÉ Marea Pro" data-variante="Laguna" data-precio="489" data-color="car-laguna">
+            <span>Añadir al carrito</span><svg aria-hidden="true"><use href="#i-flecha"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="producto">
+        <div class="producto-visual">
+          <span class="etiqueta oro">Edición limitada</span>
+          <svg class="pieza" viewBox="0 0 620 400" role="img" aria-label="AQUALISÉ Éclat Édition en acabado champán" style="--carcasa:url(#car-champan)"><use href="#pieza-aqualise"/></svg>
+        </div>
+        <div class="producto-cuerpo">
+          <div class="estrellas" aria-label="Valoración: 5 sobre 5">
+            <svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg><svg aria-hidden="true"><use href="#i-estrella"/></svg>
+          </div>
+          <h3>AQUALISÉ Éclat Édition</h3>
+          <p class="desc">Trescientas piezas numeradas. Titanio grado 5 pulido a espejo, estuche forrado en nácar y grabado a mano de tus iniciales.</p>
+          <div class="producto-specs">
+            <span class="chip">Serie de 300</span><span class="chip">Titanio grado 5</span><span class="chip">Grabado a mano</span>
+          </div>
+          <div class="producto-pie">
+            <div class="precio">720 €<small>IVA incluido</small></div>
+          </div>
+          <button class="btn btn-primario btn-bloque btn-pequeno anadir" type="button" data-nombre="AQUALISÉ Éclat Édition" data-variante="Champán" data-precio="720" data-color="car-champan">
+            <span>Añadir al carrito</span><svg aria-hidden="true"><use href="#i-flecha"/></svg>
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== Acabados ========== -->
+<section class="seccion" id="acabados">
+  <div class="contenedor acabados">
+    <div class="acabados-escena revelar-escala">
+      <svg class="pieza acabado-pieza visible" viewBox="0 0 620 400" data-acabado="nacar" role="img" aria-label="Acabado nácar" style="--carcasa:url(#car-nacar)"><use href="#pieza-aqualise"/></svg>
+      <svg class="pieza acabado-pieza" viewBox="0 0 620 400" data-acabado="laguna" role="img" aria-label="Acabado laguna" style="--carcasa:url(#car-laguna)" aria-hidden="true"><use href="#pieza-aqualise"/></svg>
+      <svg class="pieza acabado-pieza" viewBox="0 0 620 400" data-acabado="titanio" role="img" aria-label="Acabado titanio nocturno" style="--carcasa:url(#car-titanio)" aria-hidden="true"><use href="#pieza-aqualise"/></svg>
+      <svg class="pieza acabado-pieza" viewBox="0 0 620 400" data-acabado="champan" role="img" aria-label="Acabado champán pálido" style="--carcasa:url(#car-champan)" aria-hidden="true"><use href="#pieza-aqualise"/></svg>
+      <span class="nombre-acabado" id="nombreAcabado">Nácar · acabado mate sedoso</span>
+    </div>
+
+    <div class="acabados-texto revelar">
+      <span class="antetitulo">Acabados</span>
+      <h2 class="titulo-1">Cuatro luces<br>del mismo azul</h2>
+      <p class="entradilla">Cada carcasa se pule durante once horas y se sella con una capa cerámica que resiste el cloro, la sal y la crema solar sin perder el brillo.</p>
+
+      <div class="muestras" role="group" aria-label="Elige tu acabado">
+        <button class="muestra" type="button" aria-pressed="true" data-acabado="nacar" aria-label="Acabado nácar"
+          style="background:linear-gradient(140deg,#FFFFFF,#F0F6F8 45%,#C3D3DA)"></button>
+        <button class="muestra" type="button" aria-pressed="false" data-acabado="laguna" aria-label="Acabado laguna"
+          style="background:linear-gradient(140deg,#BDE6F2,#6FC1D8 45%,#1B7E99)"></button>
+        <button class="muestra" type="button" aria-pressed="false" data-acabado="titanio" aria-label="Acabado titanio nocturno"
+          style="background:linear-gradient(140deg,#6E8592,#3E525F 45%,#1C2B35)"></button>
+        <button class="muestra" type="button" aria-pressed="false" data-acabado="champan" aria-label="Acabado champán pálido"
+          style="background:linear-gradient(140deg,#F6EAD4,#E2CDA4 45%,#B99C67)"></button>
+      </div>
+
+      <div class="acabado-detalle">
+        <h3 id="tituloAcabado">Nácar</h3>
+        <p id="textoAcabado">El blanco cálido de la porcelana marina. Desaparece bajo la luz de la piscina y no muestra una sola huella.</p>
+      </div>
+
+      <div class="acabado-precio">
+        <div class="precio" id="precioAcabado">489 €</div>
+        <em>o 4 pagos de <span id="plazoAcabado">122,25 €</span></em>
+      </div>
+
+      <div class="acabados-acciones">
+        <button class="btn btn-primario anadir" type="button" id="anadirAcabado" data-nombre="AQUALISÉ Marea Pro" data-variante="Nácar" data-precio="489" data-color="car-nacar">
+          <span>Añadir al carrito</span><svg aria-hidden="true"><use href="#i-flecha"/></svg>
+        </button>
+        <a href="#club" class="btn btn-secundario"><span>Probar 30 días</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Beneficios ========== -->
+<section class="seccion seccion-clara">
+  <div class="contenedor">
+    <div class="cabeza-seccion centrado revelar">
+      <span class="antetitulo centrado">Por qué AQUALISÉ</span>
+      <h2 class="titulo-1">La diferencia se nota<br>en el primer largo</h2>
+      <p class="entradilla">Seis decisiones de ingeniería que explican por qué nuestros clientes no vuelven a nadar sin ellos.</p>
+    </div>
+
+    <div class="beneficios escalonado">
+      <article class="beneficio">
+        <span class="beneficio-num">01</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-hueso"/></svg></div>
+        <h3>Sonido por el hueso</h3>
+        <p>Dos transductores apoyados en el pómulo transmiten la música directamente al oído interno. El agua deja de ser un obstáculo y se convierte en el mejor conductor posible.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio-num">02</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-gota"/></svg></div>
+        <h3>Sellado a 10 ATM</h3>
+        <p>Cuerpo monocasco sin juntas visibles, certificado hasta cien metros. Piscina, mar abierto, agua salada o cloro: nada entra.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio-num">03</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-pluma"/></svg></div>
+        <h3>Sujeción que se olvida</h3>
+        <p>Treinta y dos gramos repartidos en una banda de titanio con memoria de forma. Cabe bajo el gorro, no se mueve en el viraje y no deja marca.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio-num">04</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-memoria"/></svg></div>
+        <h3>Sin teléfono, sin cables</h3>
+        <p>Ocho gigas de memoria interna para dos mil canciones. Deja el móvil en la taquilla: el agua no interrumpe lo que ya llevas dentro.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio-num">05</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-rayo"/></svg></div>
+        <h3>Doce minutos de carga</h3>
+        <p>La base magnética devuelve tres horas de música en el tiempo que tardas en cambiarte. Autonomía total de catorce horas.</p>
+      </article>
+      <article class="beneficio">
+        <span class="beneficio-num">06</span>
+        <div class="beneficio-icono"><svg aria-hidden="true"><use href="#i-onda"/></svg></div>
+        <h3>Oídos libres</h3>
+        <p>Nada obstruye el canal auditivo. Oyes al entrenador, la señal de salida y tu respiración mientras la música sigue sonando por dentro.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Tecnología ========== -->
+<section class="seccion tecnologia" id="tecnologia">
+  <div class="contenedor">
+    <div class="tec-red">
+      <div class="revelar">
+        <span class="antetitulo">La tecnología</span>
+        <h2 class="titulo-1">Cómo suena<br>el silencio</h2>
+        <p class="entradilla">Cuatro años de laboratorio en el Cantábrico para resolver un problema antiguo: el agua ahoga los auriculares convencionales. Nosotros dejamos de intentar atravesarla.</p>
+
+        <div class="tec-lista">
+          <div class="tec-item">
+            <b>01</b>
+            <div>
+              <h4>Transductores de titanio Vibra&nbsp;Pure</h4>
+              <p>Dos motores de conducción ósea de 14 mm calibrados uno a uno. Trabajan entre 20 Hz y 20 kHz con una distorsión inferior al 0,4 % incluso sumergidos.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <b>02</b>
+            <div>
+              <h4>Ecualización adaptativa HydroSense</h4>
+              <p>Un sensor de presión detecta el momento exacto de la inmersión y reequilibra graves y medios en veinte milisegundos. La música no cambia de volumen al entrar en el agua.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <b>03</b>
+            <div>
+              <h4>Banda flexible de titanio grado 5</h4>
+              <p>Un arco de 1,1 mm con memoria de forma que ejerce la presión justa: suficiente para no moverse en el viraje, imperceptible tras cuarenta minutos.</p>
+            </div>
+          </div>
+          <div class="tec-item">
+            <b>04</b>
+            <div>
+              <h4>Sellado monocasco 10&nbsp;ATM</h4>
+              <p>Carcasa mecanizada en una sola pieza, sin juntas ni tapas. Carga magnética por contacto, porque un puerto abierto siempre acaba siendo una grieta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tec-visual revelar-escala">
+        <img src="assets/img/lifestyle-piscina.svg" alt="Nadador visto desde arriba en una piscina de lujo con los auriculares AQUALISÉ sujetos tras la nuca" width="1200" height="800" loading="lazy">
+      </div>
+    </div>
+
+    <div class="tec-cifras escalonado">
+      <div class="cifra"><strong>0,4 %</strong><span>Distorsión armónica</span></div>
+      <div class="cifra"><strong>100 m</strong><span>Profundidad certificada</span></div>
+      <div class="cifra"><strong>20 ms</strong><span>Respuesta HydroSense</span></div>
+      <div class="cifra"><strong>11 h</strong><span>De pulido por carcasa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Experiencia / lifestyle ========== -->
+<section class="lifestyle" id="experiencia">
+  <div class="lifestyle-panel">
+    <img src="assets/img/hero-inmersion.svg" alt="Nadadora avanzando bajo el agua en una piscina iluminada por el sol con auriculares AQUALISÉ" width="1400" height="1000" loading="lazy">
+    <div class="contenedor lifestyle-caja revelar">
+      <span class="antetitulo">La experiencia</span>
+      <h2 class="titulo-1">No son auriculares.<br>Es un lugar al que ir.</h2>
+      <p>Hay quien entra en el agua para competir y quien entra para desaparecer. AQUALISÉ funciona igual de bien en ambos casos: sostiene la cadencia de una serie de mil metros y acompaña el vacío luminoso de un baño al amanecer.</p>
+      <a href="#coleccion" class="btn btn-claro"><span>Descubre tu ritmo bajo el agua</span><svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="mosaico escalonado">
+      <figure>
+        <img src="assets/img/lifestyle-piscina.svg" alt="Piscina de lujo vista desde arriba con una nadadora cruzando la calle central" width="1200" height="800" loading="lazy">
+        <figcaption>Ritmo · Series de velocidad</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/lifestyle-detalle.svg" alt="Primer plano del transductor AQUALISÉ junto al oído, con gotas de agua sobre el cromo" width="1000" height="1000" loading="lazy">
+        <figcaption>Precisión · Cromo pulido a mano</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/img/club-piscina.svg" alt="Piscina infinita al amanecer con el reflejo del sol sobre el agua" width="1200" height="760" loading="lazy">
+        <figcaption>Calma · Primera luz</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Testimonios ========== -->
+<section class="seccion testimonios">
+  <div class="contenedor">
+    <div class="cabeza-seccion centrado revelar">
+      <span class="antetitulo centrado">Quienes ya nadan con ellos</span>
+      <h2 class="titulo-1">4,9 sobre 5<br>en 2.148 opiniones</h2>
+    </div>
+
+    <div class="rejilla-testimonios escalonado">
+      <figure class="testimonio">
+        <blockquote>Nado aguas abiertas desde hace quince años y siempre acepté que el mar sonaba a nada. El primer amanecer en Tarifa con los Marea Pro me tuve que parar a mitad de travesía. No me lo esperaba.</blockquote>
+        <figcaption class="testimonio-autor">
+          <span class="avatar" aria-hidden="true">MI</span>
+          <span><b>Marta Ibáñez</b><span>Nadadora de aguas abiertas · Cádiz</span></span>
+        </figcaption>
+      </figure>
+      <figure class="testimonio">
+        <blockquote>Hago 4.000 metros cuatro días por semana. Los uso bajo el gorro de competición y ni los noto en los virajes. La memoria interna me ha quitado el móvil de la taquilla y, con él, media ansiedad.</blockquote>
+        <figcaption class="testimonio-autor">
+          <span class="avatar" aria-hidden="true">AS</span>
+          <span><b>Álvaro Sanz</b><span>Triatleta de larga distancia · Valencia</span></span>
+        </figcaption>
+      </figure>
+      <figure class="testimonio">
+        <blockquote>Los compré por el diseño, lo reconozco. El Éclat en champán es una pieza preciosa. Me quedé por la hora de silencio que me regalan cada mañana antes de abrir el estudio.</blockquote>
+        <figcaption class="testimonio-autor">
+          <span class="avatar" aria-hidden="true">CR</span>
+          <span><b>Claudia Rey</b><span>Directora creativa · Madrid</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Accesorios ========== -->
+<section class="seccion seccion-clara" id="accesorios">
+  <div class="contenedor">
+    <div class="cabeza-seccion revelar">
+      <div>
+        <span class="antetitulo">La casa AQUALISÉ</span>
+        <h2 class="titulo-1">Accesorios que<br>merecen el estuche</h2>
+      </div>
+      <p class="entradilla">Piezas diseñadas en la misma mesa que los auriculares, con los mismos materiales y el mismo cuidado.</p>
+    </div>
+
+    <div class="rejilla-accesorios escalonado">
+      <article class="accesorio">
+        <img src="assets/img/acc-estuche.svg" alt="Estuche de carga AQUALISÉ en aluminio y nácar" width="600" height="600" loading="lazy">
+        <div class="accesorio-cuerpo">
+          <h3>Estuche Nácar</h3>
+          <p>Aluminio mecanizado y forro de microfibra. Tres cargas completas y un cierre magnético que suena a relojería.</p>
+          <div class="accesorio-pie">
+            <div class="precio">129 €</div>
+            <button class="btn btn-secundario btn-pequeno anadir" type="button" data-nombre="Estuche Nácar" data-variante="Aluminio" data-precio="129" data-color="car-nacar"><span>Añadir</span></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="accesorio">
+        <img src="assets/img/acc-cargador.svg" alt="Base de carga magnética inalámbrica AQUALISÉ" width="600" height="600" loading="lazy">
+        <div class="accesorio-cuerpo">
+          <h3>Base Marea</h3>
+          <p>Carga magnética por contacto sobre un disco de cristal templado. Doce minutos para tres horas de música.</p>
+          <div class="accesorio-pie">
+            <div class="precio">89 €</div>
+            <button class="btn btn-secundario btn-pequeno anadir" type="button" data-nombre="Base Marea" data-variante="Cristal" data-precio="89" data-color="car-laguna"><span>Añadir</span></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="accesorio">
+        <img src="assets/img/acc-gafas.svg" alt="Gafas de natación AQUALISÉ con lentes espejadas" width="600" height="600" loading="lazy">
+        <div class="accesorio-cuerpo">
+          <h3>Gafas Horizonte</h3>
+          <p>Lentes de visión panorámica con tratamiento antivaho permanente, perfiladas para encajar con la banda sin presionar.</p>
+          <div class="accesorio-pie">
+            <div class="precio">145 €</div>
+            <button class="btn btn-secundario btn-pequeno anadir" type="button" data-nombre="Gafas Horizonte" data-variante="Espejadas" data-precio="145" data-color="car-titanio"><span>Añadir</span></button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Club / membresía ========== -->
+<section class="seccion membresia" id="club">
+  <div class="contenedor membresia-red">
+    <div class="revelar">
+      <span class="antetitulo">Membresía</span>
+      <h2 class="titulo-1">Club Aqualisé</h2>
+      <p class="entradilla">Una comunidad reducida de nadadores que entienden el agua como un lugar y no como un ejercicio. Acceso a piscinas privadas, sesiones al amanecer y una relación directa con quienes fabrican tus auriculares.</p>
+      <div class="marco marco-ancho" style="margin-top:2.6rem">
+        <img src="assets/img/club-piscina.svg" alt="Piscina infinita privada del Club Aqualisé al amanecer" width="1200" height="760" loading="lazy">
+      </div>
+    </div>
+
+    <div class="tarjeta-club revelar">
+      <div class="club-cabeza">
+        <span>Socio fundador</span>
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#E6D7B8" stroke-width="1.5" opacity=".7"/>
+          <path d="M25 67C25 37 35.5 22 50 22s25 15 25 45" fill="none" stroke="#E6D7B8" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="25" cy="68.5" r="6.4" fill="#E6D7B8"/><circle cx="75" cy="68.5" r="6.4" fill="#E6D7B8"/>
+        </svg>
+      </div>
+      <h3>Doce meses<br>dentro del agua</h3>
+      <p>La membresía anual que convierte una compra en una relación.</p>
+      <ul class="club-lista">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Acceso a doce piscinas privadas asociadas en España y Portugal, fuera del horario público.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Sustitución inmediata del equipo durante tres años, sin preguntas y sin coste.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Listas de reproducción compuestas para nadar, con cadencias de 55 a 78 brazadas por minuto.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Dos sesiones anuales de análisis técnico con entrenadores del equipo Aqualisé.</span></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Prioridad absoluta en ediciones limitadas y grabado personalizado incluido.</span></li>
+      </ul>
+      <div class="club-pie">
+        <div class="precio">288 €<small>Al año · 24 € al mes</small></div>
+        <button class="btn btn-claro anadir" type="button" data-nombre="Club Aqualisé" data-variante="Socio fundador" data-precio="288" data-color="car-champan">
+          <span>Solicitar invitación</span><svg aria-hidden="true"><use href="#i-flecha"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Boletín ========== -->
+<section class="seccion boletin" id="boletin">
+  <div class="contenedor">
+    <div class="boletin-caja revelar">
+      <span class="antetitulo centrado">Carta de inmersión</span>
+      <h2 class="titulo-1">Una carta al mes,<br>escrita desde el agua</h2>
+      <p class="entradilla">Piscinas que merecen un viaje, listas de reproducción compuestas para nadar y acceso anticipado a las series limitadas. Nada más.</p>
+
+      <form class="formulario" id="formBoletin" novalidate>
+        <label class="campo">
+          <span class="solo-lectores">Tu correo electrónico</span>
+          <input type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+        </label>
+        <button class="btn btn-primario" type="submit"><span>Suscribirme</span><svg aria-hidden="true"><use href="#i-flecha"/></svg></button>
+      </form>
+
+      <p class="aviso-legal">Al suscribirte aceptas la <a href="#">política de privacidad</a>. Puedes darte de baja en un clic, aunque nos gustará que te quedes.</p>
+      <p class="boletin-ok" id="boletinOk"><svg aria-hidden="true"><use href="#i-check"/></svg> Bienvenida a bordo. Revisa tu correo.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== Pie ========== -->
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-superior">
+      <div class="pie-col pie-marca">
+        <a href="#inicio" class="marca">
+          <svg class="marca-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="46.5" fill="none" stroke="#7FCBE0" stroke-width="1.6" opacity=".5"/>
+            <path d="M25 67C25 37 35.5 22 50 22s25 15 25 45" fill="none" stroke="#7FCBE0" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="25" cy="68.5" r="6.4" fill="#7FCBE0"/><circle cx="75" cy="68.5" r="6.4" fill="#7FCBE0"/>
+            <path d="M12 82c7.5-6 12.5 6 20 0s12.5 6 20 0 12.5 6 20 0 12.5 6 16 2" fill="none" stroke="#46B6CE" stroke-width="2.8" stroke-linecap="round" opacity=".8"/>
+          </svg>
+          <span class="marca-texto">
+            <span class="marca-nombre">AQUALISÉ</span>
+            <span class="marca-sub">Audio subacuático</span>
+          </span>
+        </a>
+        <p class="pie-intro">Auriculares de conducción ósea diseñados y ensamblados a mano en San Sebastián para quienes encuentran su calma bajo el agua.</p>
+        <div class="redes">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4Z"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="m10.5 9.5 4.5 2.5-4.5 2.5Z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3"/><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M8 10.2c2.6-.7 5.4-.4 7.7 1M8.6 13c2.1-.5 4.3-.3 6.2.8M9.2 15.6c1.6-.4 3.2-.2 4.6.6"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.3"/><path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" d="M8 11v6M8 8.2v.1M12 17v-3.4a1.9 1.9 0 0 1 3.8 0V17"/></svg></a>
+        </div>
+      </div>
+
+      <div class="pie-col">
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="#coleccion">AQUALISÉ Onda</a></li>
+          <li><a href="#coleccion">AQUALISÉ Marea Pro</a></li>
+          <li><a href="#coleccion">Éclat Édition</a></li>
+          <li><a href="#acabados">Acabados y colores</a></li>
+          <li><a href="#accesorios">Accesorios</a></li>
+          <li><a href="#club">Tarjeta regalo</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h4>La casa</h4>
+        <ul>
+          <li><a href="#">Nuestra historia</a></li>
+          <li><a href="#tecnologia">Tecnología Vibra Pure</a></li>
+          <li><a href="#">Taller de San Sebastián</a></li>
+          <li><a href="#">Sostenibilidad</a></li>
+          <li><a href="#">Prensa</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">Envíos y entregas</a></li>
+          <li><a href="#">Devoluciones en 60 días</a></li>
+          <li><a href="#">Garantía de tres años</a></li>
+          <li><a href="#">Guía de tallas y ajuste</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+          <li><a href="#">Servicio técnico</a></li>
+        </ul>
+      </div>
+
+      <div class="pie-col">
+        <h4>Atención privada</h4>
+        <ul class="pie-contacto">
+          <li><b>Teléfono</b>+34 910 24 18 00<br>Lunes a viernes, 9:00 – 20:00</li>
+          <li style="margin-top:1.2rem"><b>Correo</b>hola@aqualise.es</li>
+          <li style="margin-top:1.2rem"><b>Atelier</b>Paseo de Salamanca 12<br>20003 San Sebastián, España</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pie-medio">
+      <div class="pagos" aria-label="Métodos de pago aceptados">
+        <span class="pago">Visa</span><span class="pago">Mastercard</span><span class="pago">Amex</span>
+        <span class="pago">Apple Pay</span><span class="pago">Bizum</span><span class="pago">Klarna</span><span class="pago">PayPal</span>
+      </div>
+      <div class="selector">
+        <label class="solo-lectores" for="pais">País</label>
+        <select id="pais">
+          <option>España (EUR €)</option><option>Portugal (EUR €)</option>
+          <option>Francia (EUR €)</option><option>Reino Unido (GBP £)</option>
+        </select>
+        <label class="solo-lectores" for="idioma">Idioma</label>
+        <select id="idioma"><option>Español</option><option>English</option><option>Français</option></select>
+      </div>
+    </div>
+
+    <div class="pie-bajo">
+      <p>© 2026 AQUALISÉ S.L. · Todos los derechos reservados</p>
+      <nav class="pie-legal" aria-label="Enlaces legales">
+        <a href="#">Aviso legal</a><a href="#">Privacidad</a><a href="#">Cookies</a>
+        <a href="#">Condiciones de venta</a><a href="#">Accesibilidad</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== Carrito ========== -->
+<div class="telon" id="telon"></div>
+<aside class="carrito" id="carrito" aria-label="Bolsa de la compra" aria-hidden="true">
+  <div class="carrito-cabeza">
+    <h3>Tu bolsa</h3>
+    <button class="icono-btn" type="button" id="cerrarCarrito" aria-label="Cerrar la bolsa"><svg aria-hidden="true"><use href="#i-cerrar"/></svg></button>
+  </div>
+  <div class="carrito-cuerpo" id="carritoCuerpo">
+    <div class="carrito-vacio" id="carritoVacio">
+      <svg aria-hidden="true"><use href="#i-carrito"/></svg>
+      <p>Tu bolsa está vacía.<br>El agua te espera.</p>
+    </div>
+  </div>
+  <div class="carrito-pie">
+    <div class="carrito-total"><span>Total</span><b id="carritoTotal">0 €</b></div>
+    <p class="carrito-nota">Envío asegurado y grabado personalizado incluidos.</p>
+    <a href="#" class="btn btn-primario btn-bloque"><span>Finalizar compra</span><svg aria-hidden="true"><use href="#i-flecha"/></svg></a>
+  </div>
+</aside>
+
+<div class="brindis" id="brindis" role="status" aria-live="polite">
+  <svg aria-hidden="true"><use href="#i-check"/></svg><span id="brindisTexto">Añadido a tu bolsa</span>
+</div>
+
+<script src="assets/js/aqualise.js" defer></script>
+</body>
+</html>

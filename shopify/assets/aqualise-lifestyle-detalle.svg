@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Macro del transductor de conduccion osea AQUALISE con gotas de agua">
+  <defs>
+    <radialGradient id="d-fondo" cx="0.42" cy="0.3" r="0.85">
+      <stop offset="0%" stop-color="#FBFEFF"/><stop offset="34%" stop-color="#D9F0F7"/>
+      <stop offset="66%" stop-color="#8FD2E5"/><stop offset="100%" stop-color="#1E7C95"/>
+    </radialGradient>
+    <linearGradient id="d-carcasa" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="38%" stop-color="#F1F8FA"/>
+      <stop offset="72%" stop-color="#D3E5EC"/><stop offset="100%" stop-color="#A9C3CD"/>
+    </linearGradient>
+    <linearGradient id="d-cromo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/><stop offset="26%" stop-color="#E4F0F4"/>
+      <stop offset="52%" stop-color="#9FB8C2"/><stop offset="74%" stop-color="#F6FBFC"/><stop offset="100%" stop-color="#8CA6B1"/>
+    </linearGradient>
+    <radialGradient id="d-lente" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0%" stop-color="#EAF7FB"/><stop offset="55%" stop-color="#BBDDE8"/><stop offset="100%" stop-color="#7FA8B6"/>
+    </radialGradient>
+    <linearGradient id="d-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".9"/><stop offset="100%" stop-color="#FFFFFF" stop-opacity=".2"/>
+    </linearGradient>
+    <mask id="d-mask"><rect width="1000" height="1000" fill="url(#d-fade)"/></mask>
+    <filter id="d-caust" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.04" numOctaves="2" seed="33" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  8 0 0 0 -3.5"/>
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+    <filter id="d-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="d-sombra" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="10" dy="26" stdDeviation="26" flood-color="#0A4457" flood-opacity=".38"/>
+    </filter>
+    <filter id="d-gota" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#0A4457" flood-opacity=".3"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="1000" fill="url(#d-fondo)"/>
+  <g mask="url(#d-mask)"><rect width="1000" height="1000" filter="url(#d-caust)" opacity=".26"/></g>
+  <ellipse cx="380" cy="250" rx="180" ry="120" fill="#FFFFFF" opacity=".45" filter="url(#d-glow)"/>
+  <ellipse cx="520" cy="760" rx="300" ry="90" fill="#0A4457" opacity=".14" filter="url(#d-glow)"/>
+
+  <!-- unidad de conduccion osea con su banda -->
+  <g filter="url(#d-sombra)">
+    <path d="M636 452c86 26 150 86 172 168 12 44 12 88 4 128" fill="none" stroke="url(#d-cromo)" stroke-width="44" stroke-linecap="round"/>
+    <path d="M648 436c88 28 156 92 178 178" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+    <g transform="rotate(-18 440 460)">
+      <rect x="236" y="352" width="408" height="240" rx="118" fill="url(#d-carcasa)"/>
+      <rect x="236" y="352" width="408" height="240" rx="118" fill="none" stroke="url(#d-cromo)" stroke-width="12"/>
+      <ellipse cx="440" cy="472" rx="104" ry="86" fill="none" stroke="#A7C0CA" stroke-width="9" opacity=".7"/>
+      <ellipse cx="440" cy="472" rx="74" ry="60" fill="url(#d-lente)"/>
+      <ellipse cx="440" cy="472" rx="44" ry="36" fill="none" stroke="#FFFFFF" stroke-width="4" opacity=".55"/>
+      <circle cx="440" cy="472" r="22" fill="#2E9BB8"/>
+      <circle cx="440" cy="472" r="9" fill="#EAF9FD"/>
+      <path d="M296 398c56-30 168-38 244-18" fill="none" stroke="#FFFFFF" stroke-width="20" stroke-linecap="round" opacity=".85"/>
+      <g opacity=".45" fill="#8FA9B3"><circle cx="286" cy="536" r="8"/><circle cx="318" cy="552" r="8"/><circle cx="352" cy="562" r="8"/></g>
+      <text x="424" y="566" text-anchor="middle" font-family="Jost, Futura, Helvetica Neue, sans-serif" font-size="22" letter-spacing="6" fill="#7A97A3">AQUALIS&#201;</text>
+    </g>
+  </g>
+
+  <!-- gotas de agua -->
+  <g filter="url(#d-gota)">
+    <g fill="#FFFFFF" opacity=".72">
+      <ellipse cx="742" cy="286" rx="26" ry="22"/><ellipse cx="812" cy="356" rx="14" ry="12"/>
+      <ellipse cx="180" cy="690" rx="20" ry="17"/><ellipse cx="128" cy="612" rx="12" ry="10"/>
+      <ellipse cx="860" cy="640" rx="17" ry="14"/><ellipse cx="256" cy="228" rx="15" ry="13"/>
+    </g>
+    <g fill="#FFFFFF" opacity=".55">
+      <circle cx="700" cy="720" r="9"/><circle cx="300" cy="820" r="12"/><circle cx="640" cy="196" r="8"/>
+    </g>
+  </g>
+  <g mask="url(#d-mask)"><rect width="1000" height="1000" filter="url(#d-caust)" opacity=".1"/></g>
+</svg>
