@@ -276,102 +276,18 @@
     }, { passive: true });
   }
 
-  /* ---------- 10. Despiece animado con el scroll ---------- */
-  var NS = 'http://www.w3.org/2000/svg';
-
-  var PIEZAS = [
-    { nombre: 'CARCASA EXTERIOR', detalle: 'Aluminio 6063 anodizado', dibujo:
-      '<rect x="-66" y="-42" width="132" height="84" rx="42" fill="url(#dp-cromo)"/>' +
-      '<rect x="-66" y="-42" width="132" height="84" rx="42" fill="none" stroke="#9FB8C2" stroke-width="2" opacity=".6"/>' +
-      '<path d="M-48-28c18-7 46-8 70-4" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" fill="none" opacity=".8"/>' +
-      '<g opacity=".4" fill="#8FA9B3"><circle cx="34" cy="30" r="3.4"/><circle cx="48" cy="24" r="3.4"/></g>' },
-
-    { nombre: 'JUNTA DE SELLADO', detalle: 'Silicona · 10 ATM', dibujo:
-      '<ellipse rx="56" ry="37" fill="none" stroke="url(#dp-junta)" stroke-width="14"/>' +
-      '<ellipse rx="56" ry="37" fill="none" stroke="#FFFFFF" stroke-width="3.5" opacity=".38"/>' },
-
-    { nombre: 'TRANSDUCTOR ÓSEO', detalle: '14 mm · Vibra Pure', dibujo:
-      '<ellipse rx="54" ry="36" fill="url(#dp-disco)"/>' +
-      '<ellipse rx="54" ry="36" fill="none" stroke="#9FB8C2" stroke-width="3"/>' +
-      '<ellipse rx="36" ry="24" fill="none" stroke="#8FA9B3" stroke-width="2.6" opacity=".7"/>' +
-      '<ellipse rx="20" ry="13" fill="#CFE6EE"/>' +
-      '<circle r="9" fill="#2E9BB8"/><circle r="3.5" fill="#EAF9FD"/>' },
-
-    { nombre: 'BOBINA DE VOZ', detalle: 'Cobre de 0,06 mm', dibujo:
-      '<ellipse rx="46" ry="31" fill="none" stroke="url(#dp-cobre)" stroke-width="15"/>' +
-      '<ellipse rx="46" ry="31" fill="none" stroke="#F0CB9A" stroke-width="2" opacity=".5"/>' +
-      '<ellipse rx="39" ry="25" fill="none" stroke="#9A6630" stroke-width="2" opacity=".35"/>' },
-
-    { nombre: 'IMÁN DE NEODIMIO', detalle: 'N52 de alta densidad', dibujo:
-      '<ellipse rx="42" ry="28" fill="url(#dp-iman)"/>' +
-      '<ellipse rx="42" ry="28" fill="none" stroke="#7C93A0" stroke-width="2" opacity=".45"/>' +
-      '<ellipse rx="20" ry="13" fill="#0B2B36"/>' +
-      '<path d="M-26-14c10-6 30-8 44-4" stroke="#A8C0CA" stroke-width="3" stroke-linecap="round" fill="none" opacity=".3"/>' },
-
-    { nombre: 'PLACA HYDROSENSE', detalle: 'Sensor de presión', dibujo:
-      '<rect x="-60" y="-35" width="120" height="70" rx="18" fill="url(#dp-placa)"/>' +
-      '<rect x="-60" y="-35" width="120" height="70" rx="18" fill="none" stroke="#2E9BB8" stroke-width="1.6" opacity=".45"/>' +
-      '<g stroke="#C6AC79" stroke-width="1.6" fill="none" opacity=".75">' +
-      '<path d="M-44-18h30v14h22"/><path d="M-44 6h18v14h40"/><path d="M12-22v14h30"/></g>' +
-      '<rect x="-15" y="-12" width="32" height="23" rx="4" fill="#0A3B44" stroke="#C6AC79" stroke-width="1.2" opacity=".9"/>' +
-      '<g fill="#C6AC79" opacity=".75"><rect x="-42" y="16" width="11" height="6" rx="2"/><rect x="28" y="-30" width="11" height="6" rx="2"/></g>' },
-
-    { nombre: 'BATERÍA', detalle: '14 h · carga en 12 min', dibujo:
-      '<rect x="-52" y="-27" width="104" height="54" rx="15" fill="url(#dp-bat)"/>' +
-      '<rect x="-52" y="-27" width="104" height="54" rx="15" fill="none" stroke="#9AB4BE" stroke-width="2" opacity=".65"/>' +
-      '<rect x="-38" y="-11" width="58" height="22" rx="7" fill="#46B6CE" opacity=".75"/>' +
-      '<rect x="26" y="-7" width="12" height="14" rx="4" fill="#9AB4BE" opacity=".75"/>' },
-
-    { nombre: 'CARCASA INTERIOR', detalle: 'Contacto con el pómulo', dibujo:
-      '<rect x="-64" y="-41" width="128" height="82" rx="41" fill="url(#dp-interior)"/>' +
-      '<rect x="-64" y="-41" width="128" height="82" rx="41" fill="none" stroke="#B4CCD5" stroke-width="2" opacity=".65"/>' +
-      '<ellipse rx="32" ry="21" fill="#DCEDF3"/>' +
-      '<ellipse rx="32" ry="21" fill="none" stroke="#A8C0CA" stroke-width="2" opacity=".55"/>' +
-      '<circle r="6" fill="#2E9BB8" opacity=".8"/>' }
-  ];
-
-  var contPiezas = $('#despiecePiezas');
+  /* ---------- 10. Despiece con el scroll ---------- */
   var pistaD = $('#despiecePista');
 
-  if (contPiezas && pistaD) {
-    var escenaD = $('#despieceEscena');
-    var ejeD = $('#despieceEje');
-    var bandaD = $('#despieceBanda');
-    var izqD = $('#despieceIzquierda');
+  if (pistaD) {
+    var marcoD = $('#despieceMarco');
+    var fotoMontado = $('#fotoMontado');
+    var fotoDespiece = $('#fotoDespiece');
     var barraD = $('#despieceBarra');
+    var notasD = $$('.despiece-nota');
+    var puntosD = $$('.despiece-punto');
+    var lineasD = $$('#despieceGuias line');
     var bloquesD = $$('.despiece-bloque');
-
-    var CX = 700, CY = 486;
-    var svgD = $('#despieceSvg');
-    var mqD = window.matchMedia('(max-width: 900px)');
-    var CAJA_MONTADA = [170, 110, 620, 460];
-    var CAJA_ABIERTA = [612, 384, 492, 1010];
-    var mezcla = function (a, b, t) { return a + (b - a) * t; };
-
-    var etiquetaSvg = function (pz, arriba) {
-      var horizontal = arriba
-        ? '<g class="pieza-etiqueta et-h"><path d="M0-56v-26" fill="none"/>' +
-          '<text y="-106" text-anchor="middle" class="et-nombre">' + pz.nombre + '</text>' +
-          '<text y="-86" text-anchor="middle" class="et-detalle">' + pz.detalle + '</text></g>'
-        : '<g class="pieza-etiqueta et-h"><path d="M0 56v26" fill="none"/>' +
-          '<text y="106" text-anchor="middle" class="et-nombre">' + pz.nombre + '</text>' +
-          '<text y="128" text-anchor="middle" class="et-detalle">' + pz.detalle + '</text></g>';
-      var vertical = '<g class="pieza-etiqueta et-v"><path d="M72 0h26" fill="none"/>' +
-        '<text x="108" y="-4" class="et-nombre">' + pz.nombre + '</text>' +
-        '<text x="108" y="18" class="et-detalle">' + pz.detalle + '</text></g>';
-      return horizontal + vertical;
-    };
-
-    var gruposPieza = PIEZAS.map(function (pz, i) {
-      var g = document.createElementNS(NS, 'g');
-      g.setAttribute('class', 'pieza');
-      g.setAttribute('transform', 'translate(' + CX + ' ' + CY + ')');
-      g.innerHTML = '<g transform="rotate(-12) scale(1.08)">' + pz.dibujo + '</g>' + etiquetaSvg(pz, i % 2 === 1);
-      contPiezas.appendChild(g);
-      return g;
-    });
-
-    var etiquetasD = $$('.pieza-etiqueta', $('#despieceSvg'));
 
     var limitar = function (t) { return t < 0 ? 0 : (t > 1 ? 1 : t); };
     var suave = function (t) { t = limitar(t); return t * t * (3 - 2 * t); };
@@ -384,54 +300,30 @@
     };
 
     var pintarDespiece = function (p) {
-      var abre = tramo(p, 0.08, 0.42) * (1 - tramo(p, 0.80, 0.96));
-      var entra = 1 - tramo(p, 0.02, 0.18);
-      var cierra = tramo(p, 0.85, 0.96);
-      var movil = mqD.matches;
-      var paso = movil ? 78 : 112;
-      var dirx = movil ? 0.05 : 0.99;
-      var diry = movil ? 0.9987 : -0.139;
+      /* se abre y se queda abierto: no hay vuelta atras */
+      var abre = tramo(p, 0.16, 0.56);
 
-      if (movil) {
-        var caja = CAJA_MONTADA.map(function (v, n) { return mezcla(v, CAJA_ABIERTA[n], abre).toFixed(1); });
-        svgD.setAttribute('viewBox', caja.join(' '));
-        escenaD.setAttribute('transform', 'translate(0 0)');
-        bandaD.setAttribute('transform', 'translate(0 ' + (-70 * abre).toFixed(2) + ')');
-        izqD.setAttribute('transform', 'translate(' + (-70 * abre).toFixed(2) + ' 0)');
-        bandaD.style.opacity = izqD.style.opacity = (1 - abre).toFixed(3);
-      } else {
-        svgD.setAttribute('viewBox', '0 0 1200 760');
-        bandaD.style.opacity = izqD.style.opacity = '1';
-        var k = (1 - 0.30 * abre) * (1 - 0.20 * cierra) * (1 - 0.06 * entra);
-        var tx = -80 * abre + 150 * entra;
-        var ty = -34 * entra - 150 * cierra - 44 * abre;
-        escenaD.setAttribute('transform',
-          'translate(' + (600 * (1 - k) + tx).toFixed(2) + ' ' + (420 * (1 - k) + ty).toFixed(2) + ') scale(' + k.toFixed(4) + ')');
-        bandaD.setAttribute('transform', 'translate(' + (-50 * abre).toFixed(2) + ' ' + (-110 * abre).toFixed(2) + ')');
-        izqD.setAttribute('transform', 'translate(' + (-130 * abre).toFixed(2) + ' ' + (30 * abre).toFixed(2) + ')');
-      }
+      fotoDespiece.style.opacity = abre.toFixed(3);
+      fotoMontado.style.opacity = (1 - abre).toFixed(3);
+      marcoD.style.transform = 'scale(' + (1.07 - 0.10 * abre).toFixed(4) + ')';
 
-      gruposPieza.forEach(function (g, i) {
-        var d = i * paso * abre;
-        g.setAttribute('transform',
-          'translate(' + (CX + d * dirx).toFixed(2) + ' ' + (CY + d * diry).toFixed(2) + ')');
+      notasD.forEach(function (n, i) {
+        var o = suave((p - (0.46 + i * 0.035)) / 0.11);
+        n.style.opacity = o.toFixed(3);
+        if (puntosD[i]) puntosD[i].style.opacity = o.toFixed(3);
+        if (lineasD[i]) lineasD[i].style.opacity = (o * 0.6).toFixed(3);
       });
 
-      var opEt = tramo(p, 0.24, 0.42) * (1 - tramo(p, 0.80, 0.90));
-      etiquetasD.forEach(function (e) { e.style.opacity = opEt; });
-      if (ejeD) ejeD.style.opacity = opEt * 0.5;
       if (barraD) barraD.style.height = (p * 100).toFixed(1) + '%';
 
-      faseActiva('intro', p < 0.12);
-      faseActiva('1', p >= 0.34 && p < 0.52);
-      faseActiva('2', p >= 0.52 && p < 0.675);
-      faseActiva('3', p >= 0.675 && p < 0.815);
-      faseActiva('final', p >= 0.93);
+      faseActiva('intro', p < 0.14);
+      faseActiva('1', p >= 0.30 && p < 0.56);
+      faseActiva('2', p >= 0.58 && p < 0.80);
+      faseActiva('final', p >= 0.86);
     };
 
     if (reducido) {
-      pintarDespiece(0.5);
-      etiquetasD.forEach(function (e) { e.style.opacity = 1; });
+      notasD.forEach(function (n) { n.style.opacity = 1; });
       bloquesD.forEach(function (b) { b.classList.add('activo'); });
     } else {
       var pendienteD = false;
@@ -450,5 +342,4 @@
       alScrollDespiece();
     }
   }
-
 })();

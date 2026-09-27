@@ -18,6 +18,20 @@ OUT = os.path.join(RAIZ, 'shopify')
 FUENTES = ("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@"
            "0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap")
 
+# Fotos reales del producto: ya estan alojadas en el CDN de la tienda, asi que en
+# Shopify se enlazan desde alli en vez de duplicarlas dentro del tema.
+CDN = "https://cdn.shopify.com/s/files/1/1033/2468/0521/files"
+FOTOS_TIENDA = {
+    "producto-montado.jpg": CDN + "/foto2producto.png?v=1789988488&width=1700&format=jpg&quality=84",
+    "producto-despiece.jpg": CDN + "/despiecefotocascos.jpg?v=1789988487&width=1700&quality=88",
+}
+
+
+def fotos_de_la_tienda(cuerpo):
+    for nombre, url in FOTOS_TIENDA.items():
+        cuerpo = cuerpo.replace('src="assets/img/%s"' % nombre, 'src="%s"' % url)
+    return cuerpo
+
 
 def leer(p):
     with open(p, encoding='utf-8') as f:
@@ -249,7 +263,7 @@ def escribir(ruta, contenido):
 def main():
     css = leer(os.path.join(RAIZ, 'assets', 'css', 'aqualise.css'))
     js = leer(os.path.join(RAIZ, 'assets', 'js', 'aqualise.js'))
-    base = aplicar_ajustes(conectar_productos(cuerpo_html()))
+    base = fotos_de_la_tienda(aplicar_ajustes(conectar_productos(cuerpo_html())))
 
     for marca in ('{{', '{%'):
         for nombre, txt in (('CSS', css), ('JS', js)):
@@ -302,11 +316,12 @@ def main():
     # --- 3. assets del tema ---------------------------------------------------
     escribir(os.path.join(OUT, 'assets', 'aqualise.css'), css)
     escribir(os.path.join(OUT, 'assets', 'aqualise.js'), js)
+    copiadas = 0
     for f in sorted(os.listdir(IMG)):
-        if f.endswith('.svg'):
+        if f.endswith(('.svg', '.jpg')):
             shutil.copyfile(os.path.join(IMG, f), os.path.join(OUT, 'assets', 'aqualise-' + f))
-    print('  %-52s %6d archivos' % ('shopify/assets/aqualise-*.svg',
-                                    len([f for f in os.listdir(IMG) if f.endswith('.svg')])))
+            copiadas += 1
+    print('  %-52s %6d archivos' % ('shopify/assets/aqualise-*', copiadas))
 
 
 if __name__ == '__main__':

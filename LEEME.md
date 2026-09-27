@@ -106,26 +106,33 @@ interactivo · seis beneficios · tecnología · panel de estilo de vida y mosai
 testimonios · accesorios · Club Aqualisé (membresía) · boletín · pie completo ·
 carrito lateral · menú móvil.
 
-### Despiece animado (`#anatomia`)
+### Despiece con scroll (`#anatomia`)
 
-Al estilo de las páginas de producto de Apple, pero sin secuencia de fotogramas: el
-producto es vectorial y se anima de forma continua.
+Va **después del manifiesto**. Al estilo de las páginas de producto de Apple, pero con
+dos fotografías reales en vez de una secuencia de 192 fotogramas.
 
-- Contenedor fijado en pantalla durante 520 vh de recorrido.
-- El scroll controla un valor de 0 a 1 que **desmonta y vuelve a montar** el auricular:
-  la banda se separa, la unidad izquierda se aparta y las **ocho piezas** de la unidad
-  derecha se abren en abanico con sus etiquetas (carcasa exterior, junta de sellado,
-  transductor óseo, bobina de voz, imán de neodimio, placa HydroSense, batería y
-  carcasa interior). Al final se vuelve a cerrar en una sola pieza.
-- Tres bloques de texto entran y salen en puntos concretos del recorrido.
-- En escritorio el abanico es horizontal; **en móvil pasa a vertical** y el `viewBox`
-  del SVG se reencuadra solo, con las etiquetas a la derecha de cada pieza.
-- Peso: unos kilobytes. No descarga ni una imagen (la referencia que inspiró esto
-  carga 192 JPG, 10,3 MB).
-- Con `prefers-reduced-motion` se muestra el despiece completo, estático y sin scroll.
+- El contenedor se fija en pantalla durante 420 vh de recorrido. El scroll controla un
+  valor de 0 a 1 que funde la foto del producto montado en la del despiece y abre
+  ligeramente el encuadre.
+- **Se abre y se queda abierto.** No vuelve a montarse: al final del recorrido el
+  despiece permanece con sus cuatro etiquetas visibles y el botón de la colección.
+- Etiquetas: banda flexible, placa y batería, transductor y tapa sellada. Cada una
+  lleva un punto sobre su pieza y una línea guía. Las coordenadas están en porcentajes
+  (`--x` / `--y` en el CSS), así que siguen pegadas a su pieza en cualquier pantalla.
+- En móvil las etiquetas salen del panel para no taparlo, y la de «placa y batería»
+  se oculta por falta de sitio.
+- Con `prefers-reduced-motion` se muestra el despiece completo, estático y con todas
+  las etiquetas.
 
-Las piezas se definen en el array `PIEZAS` de `assets/js/aqualise.js`: cambiar un
-nombre, un detalle o un dibujo es editar una línea de ese array.
+**Las fotos.** Son las de tu propio catálogo: `foto2producto.png` (montado) y
+`despiecefotocascos.jpg` (despiezado), ambas de *AQUALISÉ Titanio Nocturno*. En la
+versión estática se sirven desde `assets/img/`; en las dos versiones de Shopify se
+enlazan directamente desde el CDN de la tienda, así que no hay que subirlas al tema.
+Si prefieres servirlas desde el tema, están copiadas en `shopify/assets/` y basta con
+cambiar las dos URL de `FOTOS_TIENDA` en `herramientas/build-shopify.py`.
+
+Los nombres de las piezas y los textos describen lo que se ve en la foto, no
+especificaciones técnicas: cámbialos por los datos reales cuando los tengas.
 
 ---
 
