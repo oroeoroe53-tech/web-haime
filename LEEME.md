@@ -100,10 +100,32 @@ microtipografía con mucho interletrado). Se cargan desde Google Fonts.
 
 ## 5. Secciones
 
-Aviso superior en bucle · cabecera fija · portada · franja de prensa · manifiesto ·
-colección de tres modelos · selector de acabados interactivo · seis beneficios ·
-tecnología · panel de estilo de vida y mosaico · testimonios · accesorios ·
-Club Aqualisé (membresía) · boletín · pie completo · carrito lateral · menú móvil.
+Aviso superior en bucle · cabecera fija · portada · **despiece animado con el scroll** ·
+franja de prensa · manifiesto · colección de tres modelos · selector de acabados
+interactivo · seis beneficios · tecnología · panel de estilo de vida y mosaico ·
+testimonios · accesorios · Club Aqualisé (membresía) · boletín · pie completo ·
+carrito lateral · menú móvil.
+
+### Despiece animado (`#anatomia`)
+
+Al estilo de las páginas de producto de Apple, pero sin secuencia de fotogramas: el
+producto es vectorial y se anima de forma continua.
+
+- Contenedor fijado en pantalla durante 520 vh de recorrido.
+- El scroll controla un valor de 0 a 1 que **desmonta y vuelve a montar** el auricular:
+  la banda se separa, la unidad izquierda se aparta y las **ocho piezas** de la unidad
+  derecha se abren en abanico con sus etiquetas (carcasa exterior, junta de sellado,
+  transductor óseo, bobina de voz, imán de neodimio, placa HydroSense, batería y
+  carcasa interior). Al final se vuelve a cerrar en una sola pieza.
+- Tres bloques de texto entran y salen en puntos concretos del recorrido.
+- En escritorio el abanico es horizontal; **en móvil pasa a vertical** y el `viewBox`
+  del SVG se reencuadra solo, con las etiquetas a la derecha de cada pieza.
+- Peso: unos kilobytes. No descarga ni una imagen (la referencia que inspiró esto
+  carga 192 JPG, 10,3 MB).
+- Con `prefers-reduced-motion` se muestra el despiece completo, estático y sin scroll.
+
+Las piezas se definen en el array `PIEZAS` de `assets/js/aqualise.js`: cambiar un
+nombre, un detalle o un dibujo es editar una línea de ese array.
 
 ---
 
