@@ -476,14 +476,14 @@ function update(t) {
   uT.value = t;
   // camera
   const s = 0.12 * (t / 5) + 0.88 * sm5((t - 1.0) / 3.6);
-  const d = Math.exp(lerp(Math.log(80), Math.log(14), s));
+  const d = Math.exp(lerp(Math.log(80), Math.log(11), s));
   const az = lerp(-6, 24, s) * Math.PI / 180, el = lerp(3, 26, s) * Math.PI / 180;
-  const tg = V3(lerp(0.6, 0.7, s), lerp(0.4, -0.25, s), lerp(0, 2.6, s));
+  const tg = V3(lerp(0.6, 0.65, s), lerp(0.4, -0.3, s), lerp(0, 2.3, s));
   camera.position.set(tg.x + d * Math.sin(az) * Math.cos(el), tg.y + d * Math.sin(el), tg.z + d * Math.cos(az) * Math.cos(el));
   camera.lookAt(tg);
   const close = ss(0.35, 0.85, s);
-  skullMat.uniforms.uK.value = lerp(1, 0.45, close); padMatRef.opacity = lerp(0.45, 0.12, close); armMat.opacity = 1 - 0.97 * close; ledMat.opacity = 1 - close;
-  skinMat.uniforms.uK.value = lerp(1, 0.35, close);
+  skullMat.uniforms.uK.value = lerp(1, 0.14, close); padMatRef.opacity = lerp(0.45, 0.12, close); armMat.opacity = 1 - 0.97 * close; ledMat.opacity = 1 - close;
+  skinMat.uniforms.uK.value = lerp(1, 0.08, close);
   // bone rings
   const phase = (t - 0.35) / 0.45;
   for (const r of rings) {
@@ -491,8 +491,8 @@ function update(t) {
     if (k < 0 || u < 0 || u > 1) { r.m.material.opacity = 0; continue; }
     const p = mainCurve.getPointAt(u), tn = mainCurve.getTangentAt(u);
     r.m.position.copy(p); quat.setFromUnitVectors(Z, tn); r.m.quaternion.copy(quat);
-    const R = 0.28 + 0.3 * Math.sin(Math.PI * u); r.m.scale.setScalar(R);
-    r.m.material.opacity = Math.sin(Math.PI * u) * (r.s === 0 ? 0.8 : r.s === 1 ? 0.45 : 0.22);
+    const R = 0.22 + 0.16 * Math.sin(Math.PI * u); r.m.scale.setScalar(R);
+    r.m.material.opacity = Math.sin(Math.PI * u) * (r.s === 0 ? 0.8 : r.s === 1 ? 0.45 : 0.22) * (1 - 0.4 * close);
   }
   // ripples at contact
   ripples.forEach((m, i) => {
@@ -523,7 +523,7 @@ function update(t) {
     r.m.position.copy(p); quat.setFromUnitVectors(Z, tn); r.m.quaternion.copy(quat);
     const sIn = u * airLen - sE0; const R = (sIn < 0 ? 0.4 + Math.min(1.5, -sIn * 0.3) : 0.38) * (r.s ? 0.78 : 1);
     r.m.scale.setScalar(R);
-    r.m.material.opacity = ss(0, 0.12, u) * (1 - ss(0.9, 1.0, u)) * (r.s ? 0.12 : 0.28);
+    r.m.material.opacity = ss(0, 0.12, u) * (1 - ss(0.9, 1.0, u)) * (r.s ? 0.12 : 0.28) * (1 - 0.6 * close);
   }
   // air arrival -> drum / ossicles glow
   const arr = (delay) => { let g = 0; for (let k = 0; k < 8; k++) { const dt = t - (0.7 + 0.5 * k + 1.5 + delay); if (dt > 0) g += Math.exp(-dt * 5) * 0.9; } return Math.min(g, 1.2); };
